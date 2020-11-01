@@ -1,0 +1,26 @@
+body {
+    background: radial-gradient(pink, blue);;
+}
+
+.main-rotator {
+    background: #ffbc00;
+    color: white;
+    margin: 20px 30px;
+    padding: 10px;
+    width: 100px;
+    position: absolute;
+    text-align: center;
+    font-size: 22px;
+    font-family: Helvetica, Arial, serif;
+    cursor: pointer;
+}
+
+.main-rotator:hover {
+    background: brown;
+}
+
+#main-canvas {
+    background: #ffedae;
+    display: block;
+    margin: auto;
+}
