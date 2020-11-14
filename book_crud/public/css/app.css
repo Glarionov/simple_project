@@ -10903,7 +10903,31 @@ a.text-dark:focus {
   }
 }
 
+html,
+body,
+.main-content,
+#main-wrapper,
+.not-found-page {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  background: green;
+  background: lightgray;
+}
+
+.not-found-page {
+  background: #1965b4;
+  color: white;
+  padding: 15%;
+  font-size: 20px;
+}
+
+.not-found-page a {
+  color: #eea931;
+}
+
+.not-found-big-text {
+  font-size: 50px;
 }
 
