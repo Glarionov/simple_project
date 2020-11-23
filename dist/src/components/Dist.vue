@@ -42,7 +42,32 @@ name: "Dist",
       h: 60,
       v: 20,
       realPoints: {},
-      receivers: {},
+      receivers: {
+        1: {
+          x: 1888,
+          y: 888,
+          radius: 10,
+          fill: "blue",
+          stroke: "black",
+          strokeWidth: 4
+        },
+        2: {
+          x: 1400,
+          y: 200,
+          radius: 10,
+          fill: "blue",
+          stroke: "black",
+          strokeWidth: 4
+        },
+        3: {
+          x: 550,
+          y: 1000,
+          radius: 10,
+          fill: "blue",
+          stroke: "black",
+          strokeWidth: 4
+        },
+      },
       foundPoints: {},
       rads: {},
       car: {
@@ -200,11 +225,11 @@ name: "Dist",
         ansersByTime[tt] =
             {
               1:
-              this.countT2ByRes(receivers[1].x, receivers[1].y, tt),
+              this.countT2ByRes(this.receivers[1].x, this.receivers[1].y, tt),
               2:
-              this.countT2ByRes(receivers[2].x, receivers[2].y, tt),
+              this.countT2ByRes(this.receivers[2].x, this.receivers[2].y, tt),
               3:
-              this.countT2ByRes(receivers[3].x, receivers[3].y, tt),
+              this.countT2ByRes(this.receivers[3].x, this.receivers[3].y, tt),
               // this.countT2ByRes(0, 0, tt)[0],
               // this.countT2ByRes(300, 300, tt)[0],
             };
@@ -263,7 +288,7 @@ name: "Dist",
         }
       }
 
-      // (x - receivers[1].x)
+      // (x - this.receivers[1].x)
 
       // (x - px1) ^ 2 + (y - py1) ^ 2 = r1
       // (x - px2) ^ 2 + (y - py2) ^ 2 = r2
@@ -312,12 +337,12 @@ name: "Dist",
         }
 
 
-        let x0 = receivers[1].x;
-        let y0 = receivers[1].y;
-        let x1 = receivers[2].x;
-        let y1 = receivers[2].y;
-        let x2 = receivers[3].x;
-        let y2 = receivers[3].y;
+        let x0 = this.receivers[1].x;
+        let y0 = this.receivers[1].y;
+        let x1 = this.receivers[2].x;
+        let y1 = this.receivers[2].y;
+        let x2 = this.receivers[3].x;
+        let y2 = this.receivers[3].y;
 
 
         for (let i =1 ; i <=3 ; i++) {
@@ -381,8 +406,8 @@ name: "Dist",
 
 
             let raduis = knownTime[i]['signal'] * ss;
-            let x = receivers[i].x;
-            let y = receivers[i].y;
+            let x = this.receivers[i].x;
+            let y = this.receivers[i].y;
 
             let xa = x  ;
             let ya = y;
